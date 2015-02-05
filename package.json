@@ -1,0 +1,19 @@
+{
+  "name": "snackTzarV2",
+  "version": "0.1.0",
+  "description": "Version two of the snack tzar application",
+  "main": "gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "grunt"
+  },
+  "keywords": [
+    "snack",
+    "tzar"
+  ],
+  "author": "Brian Berg",
+  "license": "ISC"
+}

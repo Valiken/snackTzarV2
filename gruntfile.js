@@ -9,6 +9,20 @@ module.exports = function(grunt) {
         dest: 'dist/app.js'
       }
     },
+    jade: {
+      compile: {
+        options: {
+          client: false,
+          pretty: true
+        },
+        files: [{
+          cwd:  "app/views",
+          src:  "**/*.jade",
+          dest: "build/templates/",
+          ext:  ".html"
+        }]
+      }
+    },
     jshint: {
       options: {
         curly: true,
@@ -17,7 +31,7 @@ module.exports = function(grunt) {
         },
       },
       beforeconcat: ['src/*.js','lib/*.js'],
-      afterconcat: ['dist/*.js']
+      afterconcat:  ['dist/*.js']
     },
     uglify: {
       options {
@@ -30,12 +44,11 @@ module.exports = function(grunt) {
     }
   });
 
-  //Load the plugin that provides the jsHint task.
+  //Load the plugin that provides the grunt contrib tasks.
+  grunt.loadNpmTasks("grunt-contrib-jade");
   grunt.loadNpmTasks('grunt-contrib-jshint');
-
-  //Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-ugly');
 
   //default tasks.
-  grunt.registerTask('default', ['jshint'], ['uglify']);
+  grunt.registerTask('default', ['jade'], ['jshint'], ['uglify']);
 }

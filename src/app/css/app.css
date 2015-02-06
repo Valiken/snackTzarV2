@@ -1,0 +1,36 @@
+body {
+  padding-top: 25px;
+  background-image: url('../img/upfeathers.png');
+}
+.snack-tzr {
+  padding: 50px 15px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Alegreya', sans-serif;
+}
+
+.panel {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar {
+  font-family: 'Roboto', sans-serif;
+}
+
+.check-mark {
+  padding-right: 20px;
+}
+
+.panel-heading {
+  font-size: 16px;
+}
+
+@media print
+{
+  .no-print, .no-print *
+  {
+    display: none !important;
+  }
+}
